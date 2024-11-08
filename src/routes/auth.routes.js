@@ -1,9 +1,9 @@
-import { Router } from 'express'
-import passport from 'passport'
-import { getDriver } from '../neo4j.js'
-import AuthService from '../services/auth.service.js'
+import { Router } from "express";
+import passport from "passport";
+import { getDriver } from "../neo4j.js";
+import AuthService from "../services/auth.service.js";
 
-const router = new Router()
+const router = new Router();
 
 /**
  * @POST /auth/login
@@ -17,14 +17,10 @@ const router = new Router()
  * `src/passport/jwt.strategy.js` to authenticate the request.
  */
 // tag::login[]
-router.post('/login',
-  passport.authenticate('local'),
-  (req, res) => {
-    res.json(req.user)
-  }
-)
+router.post("/login", passport.authenticate("local"), (req, res) => {
+  res.json(req.user);
+});
 // end::login[]
-
 
 /**
  * @POST /auth/login
@@ -35,20 +31,31 @@ router.post('/login',
  * `src/passport/jwt.strategy.js` to authenticate the request.
  */
 // tag::register[]
-router.post('/register', async (req, res, next) => {
+router.post("/register", async (req, res, next) => {
   try {
-    const { email, password, name } = req.body
-    const driver = getDriver()
+    const { email, password, name } = req.body;
+    const driver = getDriver();
 
-    const authService = new AuthService(driver)
-    const output = await authService.register(email, password, name)
+    const authService = new AuthService(driver);
+    const output = await authService.register(email, password, name);
 
-    res.json(output)
+    res.json(output);
+  } catch (e) {
+    next(e);
   }
-  catch(e) {
-    next(e)
-  }
-})
+});
 // end::register[]
 
-export default router
+router.get("/users", async (req, res, next) => {
+  try {
+    const authService = new AuthService(getDriver()); // <2>
+
+    const users = await authService.all(); // <3>
+
+    res.json(users);
+  } catch (e) {
+    next(e);
+  }
+});
+
+export default router;

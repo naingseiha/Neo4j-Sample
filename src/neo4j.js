@@ -1,3 +1,5 @@
+import neo4j from "neo4j-driver";
+
 // TODO: Import the neo4j-driver dependency
 
 /**
@@ -6,9 +8,8 @@
  * @type {neo4j.Driver}
  */
 // tag::driver[]
-let driver
+let driver;
 // end::driver[]
-
 
 /**
  * Initiate the Neo4j Driver
@@ -21,6 +22,11 @@ let driver
 // tag::initDriver[]
 export async function initDriver(uri, username, password) {
   // TODO: Create an instance of the driver here
+  driver = neo4j.driver(uri, neo4j.auth.basic(username, password));
+
+  await driver.verifyConnectivity();
+
+  return driver;
 }
 // end::initDriver[]
 
@@ -35,7 +41,7 @@ export async function initDriver(uri, username, password) {
  */
 // tag::getDriver[]
 export function getDriver() {
-  return driver
+  return driver;
 }
 // end::getDriver[]
 
@@ -48,7 +54,7 @@ export function getDriver() {
 // tag::closeDriver[]
 export async function closeDriver() {
   if (driver) {
-    await driver.close()
+    await driver.close();
   }
 }
 // end::closeDriver[]

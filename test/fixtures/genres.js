@@ -17,52 +17,60 @@ RETURN g {
 
 export const genres = [
   {
-    link: '/genres/Action',
-    name: 'Action',
+    link: "/genres/Action",
+    name: "Action",
     movies: 1545,
-    poster: 'https://image.tmdb.org/t/p/w440_and_h660_face/qJ2tW6WMUDux911r6m7haRef0WH.jpg'
+    poster:
+      "https://image.tmdb.org/t/p/w440_and_h660_face/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
   },
   {
-    link: '/genres/Adventure',
-    name: 'Adventure',
+    link: "/genres/Adventure",
+    name: "Adventure",
     movies: 1117,
-    poster: 'https://image.tmdb.org/t/p/w440_and_h660_face/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg'
+    poster:
+      "https://image.tmdb.org/t/p/w440_and_h660_face/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
   },
   {
-    link: '/genres/Animation',
-    name: 'Animation',
+    link: "/genres/Animation",
+    name: "Animation",
     movies: 447,
-    poster: 'https://image.tmdb.org/t/p/w440_and_h660_face/eENI0WN2AAuQWfPmQupzMD6G4gV.jpg'
+    poster:
+      "https://image.tmdb.org/t/p/w440_and_h660_face/eENI0WN2AAuQWfPmQupzMD6G4gV.jpg",
   },
   {
-    link: '/genres/Children',
-    name: 'Children',
+    link: "/genres/Children",
+    name: "Children",
     movies: 583,
-    poster: 'https://image.tmdb.org/t/p/w440_and_h660_face/bSqt9rhDZx1Q7UZ86dBPKdNomp2.jpg'
+    poster:
+      "https://image.tmdb.org/t/p/w440_and_h660_face/bSqt9rhDZx1Q7UZ86dBPKdNomp2.jpg",
   },
   {
-    link: '/genres/Comedy',
-    name: 'Comedy',
+    link: "/genres/Comedy",
+    name: "Comedy",
     movies: 3315,
-    poster: 'https://image.tmdb.org/t/p/w440_and_h660_face/vnUzbdtqkudKSBgX0KGivfpdYNB.jpg'
+    poster:
+      "https://image.tmdb.org/t/p/w440_and_h660_face/vnUzbdtqkudKSBgX0KGivfpdYNB.jpg",
   },
   {
-    link: '/genres/Crime',
-    name: 'Crime',
+    link: "/genres/Crime",
+    name: "Crime",
     movies: 1100,
-    poster: 'https://image.tmdb.org/t/p/w440_and_h660_face/5KCVkau1HEl7ZzfPsKAPM0sMiKc.jpg'
+    poster:
+      "https://image.tmdb.org/t/p/w440_and_h660_face/5KCVkau1HEl7ZzfPsKAPM0sMiKc.jpg",
   },
   {
-    link: '/genres/Documentary',
-    name: 'Documentary',
+    link: "/genres/Documentary",
+    name: "Documentary",
     movies: 495,
-    poster: 'https://image.tmdb.org/t/p/w440_and_h660_face/gVVd7hEfOgJ3OYkOUaoCqIZMmpC.jpg'
+    poster:
+      "https://image.tmdb.org/t/p/w440_and_h660_face/gVVd7hEfOgJ3OYkOUaoCqIZMmpC.jpg",
   },
   {
-    link: '/genres/Drama',
-    name: 'Drama',
+    link: "/genres/Drama",
+    name: "Drama",
     movies: 4365,
-    poster: 'https://image.tmdb.org/t/p/w440_and_h660_face/5KCVkau1HEl7ZzfPsKAPM0sMiKc.jpg'
+    poster:
+      "https://image.tmdb.org/t/p/w440_and_h660_face/5KCVkau1HEl7ZzfPsKAPM0sMiKc.jpg",
   },
   // {
   //     link: '/genres/Fantasy',
@@ -130,4 +138,4 @@ export const genres = [
   //     movies: 168,
   //     poster: 'https://image.tmdb.org/t/p/w440_and_h660_face/eWivEg4ugIMAd7d4uWI37b17Cgj.jpg'
   // },
-]
+];
